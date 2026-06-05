@@ -1,133 +1,161 @@
-# First Principles Skill
+<div align="center">
+  <img src="assets/hero.svg" alt="First Principles Skill" width="100%">
 
-[中文](README.zh-CN.md)
+  <h1>First Principles Skill</h1>
 
-A first-principles thinking toolkit for vibe coding agents — helping Claude Code, Codex, Cursor, Windsurf, and other AI coding tools reason from fundamentals before writing code.
+  <p>
+    <strong>A first-principles thinking toolkit for vibe coding agents.</strong>
+    <br>
+    Make Claude Code, Codex, Cursor, Windsurf, Aider, Cline, Gemini CLI and other AI coding tools reason from fundamentals before writing code.
+  </p>
+
+  <p>
+    <a href="README.zh-CN.md">中文</a>
+    ·
+    <a href="docs/installation.md">Installation</a>
+    ·
+    <a href="docs/usage.md">Usage</a>
+    ·
+    <a href="docs/philosophy.md">Philosophy</a>
+  </p>
+
+  <p>
+    <img alt="Vibe Coding" src="https://img.shields.io/badge/Vibe%20Coding-ready-8B5CF6?style=for-the-badge">
+    <img alt="AI Agents" src="https://img.shields.io/badge/AI%20Agents-compatible-06B6D4?style=for-the-badge">
+    <img alt="Markdown Only" src="https://img.shields.io/badge/Markdown-only-10B981?style=for-the-badge">
+    <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge">
+  </p>
+</div>
+
+## The Hot Take
+
+Vibe coding is the new interface. First-principles thinking is the guardrail.
+
+AI coding agents can move incredibly fast, but speed without reasoning often becomes fragile code, unnecessary abstractions, trend-driven architecture, and patches that only hide symptoms.
+
+First Principles Skill gives your agent a lightweight reasoning ritual:
+
+```text
+Do not just code the request.
+Find the real problem.
+Separate facts from assumptions.
+Identify constraints and root cause.
+Compare options.
+Choose the smallest verifiable path.
+Then implement.
+```
+
+Ship the vibe. Keep the engineering.
 
 ## What This Is
 
-First Principles Skill is a lightweight open-source prompt toolkit for AI coding agents. It gives developers reusable prompts, project instructions, and integration examples that push coding tools to reason from fundamentals before they edit files.
+First Principles Skill is a lightweight open-source prompt toolkit for AI coding agents.
 
-Use it when you want an agent to slow down, clarify the real problem, separate facts from assumptions, compare options, and choose a small, reliable, reversible path.
+It gives developers reusable prompts, project instructions, and integration examples that make coding agents reason before they edit files.
 
-No framework. No dependency. No build step. Just prompts and project instructions you can copy into the agent you already use.
+No framework. No dependency. No build step. Just Markdown prompts you can copy into the agent you already use.
 
-## Why Vibe Coding Needs First Principles
+## Why It Exists
 
-Vibe coding is fast, but speed can amplify shallow reasoning. Agents often jump from a surface request to an implementation before checking whether the request describes the real problem.
+AI coding tools are great at executing. That is also the danger.
 
-First-principles thinking adds a disciplined pause:
+If you ask for the wrong thing, many agents will confidently build the wrong thing. This toolkit helps agents pause just long enough to ask:
 
-- Break down the problem.
-- Separate known facts from assumptions.
-- Identify constraints and root causes.
-- Derive options from fundamentals.
-- Choose the smallest verifiable implementation.
-- Keep rollback and risk visible.
+- What is the actual problem?
+- What do we know for sure?
+- What are we assuming?
+- Is this the root cause or a symptom?
+- Which solution is simplest, reversible, and testable?
+- How do we verify the change?
+- How do we roll it back?
 
-The goal is not to make AI coding slower. The goal is to make it less random, less overbuilt, and easier to trust.
+## How It Works
 
-## Problems It Helps Solve
+<p align="center">
+  <img src="assets/reasoning-loop.svg" alt="First-principles reasoning loop" width="100%">
+</p>
 
-- Agents patching symptoms instead of root causes.
-- Architecture decisions driven by trends instead of constraints.
-- Refactors that move code around without reducing complexity.
-- Product requests turning into feature piles.
-- Technical choices made before tradeoffs are explicit.
-- Large changes that are hard to test or roll back.
+The toolkit turns "just implement this" into a small reasoning loop:
 
-Think of it as rocket-engineer thinking for everyday software work: build from fundamentals, reason before code, verify before confidence.
-
-## Supported Tools
-
-This toolkit is designed for any vibe coding or AI coding agent that accepts custom instructions, project rules, skills, or prompt templates, including:
-
-- Claude Code
-- Codex
-- Cursor
-- Windsurf
-- Aider
-- Cline
-- Gemini CLI
-- Other chat-based or editor-integrated coding agents
-
-If your tool can accept a prompt, it can use this toolkit.
+| Step | Agent Should Ask | Why It Matters |
+| --- | --- | --- |
+| Problem | What is the real problem behind the request? | Avoids blindly accepting surface solutions. |
+| Facts | What is known from code, logs, tests, docs, or the user? | Keeps reasoning grounded. |
+| Assumptions | What are we guessing? | Makes uncertainty visible. |
+| Root Cause | Why is this happening? | Prevents symptom patching. |
+| Options | What are the viable paths? | Avoids one-shot implementation bias. |
+| Implementation | What is the smallest reliable step? | Reduces blast radius. |
+| Verification | How do we prove it worked? | Replaces confidence with evidence. |
+| Rollback | How do we undo it? | Keeps risky changes reversible. |
 
 ## Quick Start
 
-1. Copy [`prompts/first-principles.md`](prompts/first-principles.md) into your agent's custom instructions, project rules, or system prompt area.
-2. For focused work, copy one of the scenario prompts from [`prompts/`](prompts/).
-3. Ask your agent to use first-principles reasoning before changing code:
+Copy this into your coding agent:
 
 ```text
-Use first-principles thinking before implementing this. Identify facts, assumptions, constraints, root cause, options, tradeoffs, verification, risks, and rollback.
+Use first-principles thinking before implementing this.
+
+Identify:
+- Problem
+- Desired outcome
+- Known facts
+- Assumptions
+- Constraints
+- Root cause
+- Options
+- Tradeoffs
+- Recommendation
+- Implementation plan
+- Verification
+- Risks
+- Rollback plan
+
+Do not default to accepting my proposed implementation.
+Do not start by writing code.
+Prefer the smallest reversible and verifiable solution.
 ```
 
-## Generic Usage
-
-Use the universal prompt when the task is broad or mixed:
-
-- Debugging a production issue.
-- Designing a new service boundary.
-- Deciding whether to adopt a library.
-- Planning a refactor.
-- Evaluating a product feature.
-- Choosing between multiple implementation paths.
-
-Use a scenario prompt when the work has a clear shape:
-
-- [`first-principles-debugging.md`](prompts/first-principles-debugging.md)
-- [`first-principles-architecture.md`](prompts/first-principles-architecture.md)
-- [`first-principles-refactoring.md`](prompts/first-principles-refactoring.md)
-- [`first-principles-product.md`](prompts/first-principles-product.md)
-
-## Claude Code
-
-Claude Code users can copy the example skill from:
+Or use the full universal prompt:
 
 ```text
-integrations/claude-code/.claude/skills/first-principles/SKILL.md
+prompts/first-principles.md
 ```
 
-into a project's `.claude/skills/first-principles/SKILL.md` location if they use Claude Code skills.
+## Prompt Pack
 
-If your Claude Code setup does not use skills, copy the prompt content into your project instructions or custom instructions instead.
+| Prompt | Use It For | Core Bias |
+| --- | --- | --- |
+| [`first-principles.md`](prompts/first-principles.md) | General reasoning before implementation | Reason before code |
+| [`first-principles-debugging.md`](prompts/first-principles-debugging.md) | Bugs, regressions, incidents, failing tests | Root cause before patch |
+| [`first-principles-architecture.md`](prompts/first-principles-architecture.md) | System design, APIs, services, migrations | Constraints before architecture |
+| [`first-principles-refactoring.md`](prompts/first-principles-refactoring.md) | Cleanup, boundaries, technical debt | Complexity source before refactor |
+| [`first-principles-product.md`](prompts/first-principles-product.md) | Product scope, feature requests, roadmap calls | User problem before feature pile |
 
-## Codex
+## Agent Integrations
 
-Codex users can copy or merge:
+| Tool | Integration | How To Use |
+| --- | --- | --- |
+| Claude Code | [`integrations/claude-code/.claude/skills/first-principles/SKILL.md`](integrations/claude-code/.claude/skills/first-principles/SKILL.md) | Copy into a Claude Code skill path if your workflow uses skills. Otherwise copy into project instructions. |
+| Codex | [`integrations/codex/AGENTS.md`](integrations/codex/AGENTS.md) | Merge into your repository's `AGENTS.md`. |
+| Cursor | [`integrations/cursor/cursor-rules.md`](integrations/cursor/cursor-rules.md) | Copy into Cursor Rules or project instructions. |
+| Windsurf | [`integrations/windsurf/windsurf-rules.md`](integrations/windsurf/windsurf-rules.md) | Copy into Windsurf rules, custom instructions, or project instructions. |
+| Aider, Cline, Gemini CLI, others | [`prompts/first-principles.md`](prompts/first-principles.md) | Paste into the agent's reusable prompt, custom instructions, or task preface. |
 
-```text
-integrations/codex/AGENTS.md
-```
+This repository avoids invented platform commands. If a tool's configuration flow changes, copy the relevant prompt into that tool's current project rules or custom instruction mechanism.
 
-into the target repository's `AGENTS.md`.
+## Where This Helps
 
-Use it as project-level guidance for how Codex should approach debugging, architecture, refactoring, technical decisions, and implementation planning.
-
-## Cursor
-
-Cursor users can copy:
-
-```text
-integrations/cursor/cursor-rules.md
-```
-
-into Cursor Rules or project instructions. Treat it as a rule set, not as a command.
-
-## Windsurf
-
-Windsurf users can copy:
-
-```text
-integrations/windsurf/windsurf-rules.md
-```
-
-into Windsurf rules, custom instructions, or project instructions.
+| Scenario | What Usually Goes Wrong | First-Principles Move |
+| --- | --- | --- |
+| Debugging | Agent patches the first error message. | Reproduce, isolate candidates, prove root cause. |
+| Architecture | Agent reaches for fashionable infrastructure. | Start from constraints, data flow, failure modes, team capacity. |
+| Refactoring | Agent moves code without reducing complexity. | Find the true complexity source, preserve behavior. |
+| Technical decisions | Agent picks the popular tool. | Compare fit, cost, reversibility, verification. |
+| Product thinking | Agent turns every request into a feature. | Start from user problem, value chain, evidence, smallest experiment. |
 
 ## Example Prompts
 
-See [`examples/`](examples/) for practical examples:
+Practical examples live in [`examples/`](examples/):
 
 - [`debugging.md`](examples/debugging.md)
 - [`architecture.md`](examples/architecture.md)
@@ -135,9 +163,9 @@ See [`examples/`](examples/) for practical examples:
 - [`technical-decision.md`](examples/technical-decision.md)
 - [`product-thinking.md`](examples/product-thinking.md)
 
-## Best-Fit Scenarios
+## When To Use It
 
-First Principles Skill is useful when the task has ambiguity, risk, or multiple possible paths:
+Use it when the task has ambiguity, risk, or multiple possible paths:
 
 - Root-cause debugging
 - Architecture design
@@ -149,7 +177,7 @@ First Principles Skill is useful when the task has ambiguity, risk, or multiple 
 - Security-sensitive changes
 - Migration planning
 
-For tiny, obvious edits, keep the analysis brief. The point is disciplined reasoning, not ceremony.
+For tiny, obvious edits, keep the reasoning short. The point is discipline, not ceremony.
 
 ## File Structure
 
@@ -160,6 +188,9 @@ LICENSE
 CHANGELOG.md
 CONTRIBUTING.md
 .gitignore
+assets/
+  hero.svg
+  reasoning-loop.svg
 prompts/
   first-principles.md
   first-principles-debugging.md
@@ -189,7 +220,7 @@ docs/
 
 ## Safety And Privacy
 
-This repository contains only text prompts and documentation. It does not require API keys, telemetry, package installation, or network access.
+This repository contains only text prompts, docs, and lightweight SVG assets. It does not require API keys, telemetry, package installation, or runtime network access.
 
 When contributing, do not commit:
 
@@ -201,7 +232,7 @@ When contributing, do not commit:
 
 ## Contributing
 
-Contributions are welcome. Please keep the toolkit lightweight, vendor-neutral, and practical.
+Contributions are welcome. Keep the toolkit lightweight, vendor-neutral, and practical.
 
 Before opening a pull request:
 

@@ -1,133 +1,161 @@
-# First Principles Skill
+<div align="center">
+  <img src="assets/hero.svg" alt="First Principles Skill" width="100%">
 
-[English](README.md)
+  <h1>First Principles Skill</h1>
 
-一个面向 vibe coding agents 的第一性原理思考工具包，帮助 Claude Code、Codex、Cursor、Windsurf 和其他 AI 编程工具在写代码前先从底层原则推理。
+  <p>
+    <strong>面向 vibe coding agents 的第一性原理思考工具包。</strong>
+    <br>
+    让 Claude Code、Codex、Cursor、Windsurf、Aider、Cline、Gemini CLI 和其他 AI 编程工具在写代码前先从底层原则推理。
+  </p>
+
+  <p>
+    <a href="README.md">English</a>
+    ·
+    <a href="docs/installation.md">Installation</a>
+    ·
+    <a href="docs/usage.md">Usage</a>
+    ·
+    <a href="docs/philosophy.md">Philosophy</a>
+  </p>
+
+  <p>
+    <img alt="Vibe Coding" src="https://img.shields.io/badge/Vibe%20Coding-ready-8B5CF6?style=for-the-badge">
+    <img alt="AI Agents" src="https://img.shields.io/badge/AI%20Agents-compatible-06B6D4?style=for-the-badge">
+    <img alt="Markdown Only" src="https://img.shields.io/badge/Markdown-only-10B981?style=for-the-badge">
+    <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge">
+  </p>
+</div>
+
+## 一句话
+
+Vibe coding 是新的编程界面，first-principles thinking 是安全护栏。
+
+AI 编程 agent 可以非常快，但没有推理的速度，经常会变成脆弱代码、无意义抽象、跟风架构，以及只遮住症状的补丁。
+
+First Principles Skill 给你的 agent 加上一段轻量推理仪式：
+
+```text
+不要只是照着需求写代码。
+先找到真正问题。
+区分事实和假设。
+识别约束和根因。
+比较多个选择。
+选择最小、可验证的路径。
+然后再实现。
+```
+
+保留 vibe，也保留工程质量。
 
 ## 这是什么
 
-First Principles Skill 是一个轻量级开源 prompt 工具包，面向各类 AI coding agents。它提供可复用的 prompts、项目指令和集成示例，帮助 AI 编程工具在修改代码前先从基本事实和约束出发进行推理。
+First Principles Skill 是一个轻量级开源 prompt 工具包，面向各类 AI coding agents。
 
-当你希望 agent 先慢下来、澄清真正问题、区分事实和假设、比较多个方案，并选择小而可靠、可逆、可验证的路径时，可以使用它。
+它提供可复用的 prompts、项目指令和集成示例，让 coding agents 在修改文件前先进行推理。
 
-没有框架。没有依赖。没有构建步骤。只有可以复制到现有 AI 编程工具里的 prompts 和项目指令。
+没有框架。没有依赖。没有构建步骤。只有可以复制到现有 AI 编程工具中的 Markdown prompts。
 
-## 为什么 Vibe Coding 需要 First Principles
+## 为什么需要它
 
-Vibe coding 很快，但速度也会放大浅层推理的问题。Agents 经常从表面需求直接跳到实现，而没有先判断这个需求是否描述了真正的问题。
+AI 编程工具很擅长执行，这也是风险所在。
 
-第一性原理思考会加入一个有纪律的停顿：
+如果你提出的是错误问题，很多 agents 会很自信地把错误方案实现出来。这个工具包帮助 agent 先停一下，问清楚：
 
-- 拆解问题。
-- 区分已知事实和假设。
-- 识别约束和根因。
-- 从底层原则推导选项。
-- 选择最小、可验证的实现路径。
-- 明确风险和回滚方式。
+- 真正的问题是什么？
+- 哪些信息是确定事实？
+- 哪些只是我们的假设？
+- 这是根因，还是表面症状？
+- 哪个方案最简单、可逆、可测试？
+- 如何验证改动有效？
+- 如果出问题，如何回滚？
 
-目标不是让 AI 编程变慢，而是让它更少随机发挥、更少过度设计，也更容易被信任。
+## 它如何工作
 
-## 它解决什么问题
+<p align="center">
+  <img src="assets/reasoning-loop.svg" alt="第一性原理推理流程" width="100%">
+</p>
 
-- Agents 只修表面症状，而不是根因。
-- 架构决策被流行趋势驱动，而不是被约束驱动。
-- 重构只是移动代码，并没有降低复杂度。
-- 产品需求变成功能堆叠。
-- 技术选型在权衡明确之前就被决定。
-- 大改动难以测试，也难以回滚。
+这个工具包会把“直接实现这个需求”变成一个小型推理闭环：
 
-可以把它理解为日常软件工作的 rocket-engineer thinking：从基本原理搭建，reason before code，verify before confidence。
-
-## 支持哪些工具
-
-这个工具包适用于任何支持自定义指令、项目规则、skills 或 prompt 模板的 vibe coding / AI coding agent，包括：
-
-- Claude Code
-- Codex
-- Cursor
-- Windsurf
-- Aider
-- Cline
-- Gemini CLI
-- 其他聊天式或编辑器内的 AI 编程工具
-
-只要你的工具能接受 prompt，就可以使用这个工具包。
+| 步骤 | Agent 应该问什么 | 为什么重要 |
+| --- | --- | --- |
+| Problem | 需求背后真正的问题是什么？ | 避免盲目接受表面方案。 |
+| Facts | 从代码、日志、测试、文档或用户那里确认了什么？ | 让推理有依据。 |
+| Assumptions | 哪些只是猜测？ | 让不确定性显性化。 |
+| Root Cause | 为什么会发生？ | 避免只修症状。 |
+| Options | 有哪些可行路径？ | 避免一次性拍脑袋实现。 |
+| Implementation | 最小可靠步骤是什么？ | 降低改动半径。 |
+| Verification | 如何证明它有效？ | 用证据替代自信。 |
+| Rollback | 如何撤回？ | 让高风险改动保持可逆。 |
 
 ## 快速开始
 
-1. 将 [`prompts/first-principles.md`](prompts/first-principles.md) 复制到你的 agent 自定义指令、项目规则或系统 prompt 区域。
-2. 如果是特定场景，可以从 [`prompts/`](prompts/) 复制对应的场景 prompt。
-3. 要求 agent 在改代码前使用第一性原理推理：
+把下面这段复制到你的 coding agent：
 
 ```text
-Use first-principles thinking before implementing this. Identify facts, assumptions, constraints, root cause, options, tradeoffs, verification, risks, and rollback.
+Use first-principles thinking before implementing this.
+
+Identify:
+- Problem
+- Desired outcome
+- Known facts
+- Assumptions
+- Constraints
+- Root cause
+- Options
+- Tradeoffs
+- Recommendation
+- Implementation plan
+- Verification
+- Risks
+- Rollback plan
+
+Do not default to accepting my proposed implementation.
+Do not start by writing code.
+Prefer the smallest reversible and verifiable solution.
 ```
 
-## 通用使用方式
-
-当任务较宽泛或包含多个方面时，使用通用 prompt：
-
-- 调试生产问题。
-- 设计新的服务边界。
-- 判断是否要引入某个库。
-- 规划一次重构。
-- 评估一个产品功能。
-- 在多个实现路径之间做选择。
-
-当工作有明确场景时，使用场景 prompt：
-
-- [`first-principles-debugging.md`](prompts/first-principles-debugging.md)
-- [`first-principles-architecture.md`](prompts/first-principles-architecture.md)
-- [`first-principles-refactoring.md`](prompts/first-principles-refactoring.md)
-- [`first-principles-product.md`](prompts/first-principles-product.md)
-
-## Claude Code 使用方式
-
-Claude Code 用户可以复制示例 skill：
+或者使用完整通用 prompt：
 
 ```text
-integrations/claude-code/.claude/skills/first-principles/SKILL.md
+prompts/first-principles.md
 ```
 
-如果你的项目使用 Claude Code skills，可以放到项目中的 `.claude/skills/first-principles/SKILL.md` 路径。
+## Prompt 套件
 
-如果你的 Claude Code 工作流不使用 skills，可以将 prompt 内容复制到项目指令或自定义指令中。
+| Prompt | 适合场景 | 核心偏向 |
+| --- | --- | --- |
+| [`first-principles.md`](prompts/first-principles.md) | 实现前的通用推理 | Reason before code |
+| [`first-principles-debugging.md`](prompts/first-principles-debugging.md) | Bug、回归、事故、失败测试 | 先找根因，再打补丁 |
+| [`first-principles-architecture.md`](prompts/first-principles-architecture.md) | 系统设计、API、服务、迁移 | 先看约束，再谈架构 |
+| [`first-principles-refactoring.md`](prompts/first-principles-refactoring.md) | 清理代码、边界调整、技术债 | 先找复杂度来源，再重构 |
+| [`first-principles-product.md`](prompts/first-principles-product.md) | 产品范围、功能需求、路线判断 | 先看用户问题，再堆功能 |
 
-## Codex 使用方式
+## Agent 集成
 
-Codex 用户可以复制或合并：
+| 工具 | 集成文件 | 使用方式 |
+| --- | --- | --- |
+| Claude Code | [`integrations/claude-code/.claude/skills/first-principles/SKILL.md`](integrations/claude-code/.claude/skills/first-principles/SKILL.md) | 如果你的工作流使用 Claude Code skills，可以复制到 skill 路径；否则复制到项目指令。 |
+| Codex | [`integrations/codex/AGENTS.md`](integrations/codex/AGENTS.md) | 合并到仓库的 `AGENTS.md`。 |
+| Cursor | [`integrations/cursor/cursor-rules.md`](integrations/cursor/cursor-rules.md) | 复制到 Cursor Rules 或项目指令。 |
+| Windsurf | [`integrations/windsurf/windsurf-rules.md`](integrations/windsurf/windsurf-rules.md) | 复制到 Windsurf rules、自定义指令或项目指令。 |
+| Aider、Cline、Gemini CLI、其他工具 | [`prompts/first-principles.md`](prompts/first-principles.md) | 粘贴到可复用 prompt、自定义指令或任务开头。 |
 
-```text
-integrations/codex/AGENTS.md
-```
+这个仓库不会编造平台命令。如果某个工具的配置方式变化，请把相关 prompt 复制到该工具当前支持的项目规则或自定义指令中。
 
-到目标仓库的 `AGENTS.md`。
+## 它适合解决什么
 
-它可以作为项目级指导，告诉 Codex 在调试、架构设计、重构、技术决策和实现规划中如何先进行第一性原理分析。
-
-## Cursor 使用方式
-
-Cursor 用户可以复制：
-
-```text
-integrations/cursor/cursor-rules.md
-```
-
-到 Cursor Rules 或项目指令中。把它当作规则集，而不是命令。
-
-## Windsurf 使用方式
-
-Windsurf 用户可以复制：
-
-```text
-integrations/windsurf/windsurf-rules.md
-```
-
-到 Windsurf rules、自定义指令或项目指令中。
+| 场景 | 常见问题 | 第一性原理动作 |
+| --- | --- | --- |
+| Debugging | Agent 只修第一个报错。 | 复现、隔离候选原因、证明根因。 |
+| Architecture | Agent 直接上流行基础设施。 | 从约束、数据流、失败模式、团队能力出发。 |
+| Refactoring | Agent 移动代码但没有降低复杂度。 | 找到真正复杂度来源，保持行为不变。 |
+| Technical decisions | Agent 选择热门工具。 | 比较适配度、成本、可逆性、验证方式。 |
+| Product thinking | Agent 把每个请求都变成功能。 | 从用户问题、价值链、证据、最小实验出发。 |
 
 ## 示例 Prompts
 
-查看 [`examples/`](examples/) 中的实践示例：
+实践示例位于 [`examples/`](examples/)：
 
 - [`debugging.md`](examples/debugging.md)
 - [`architecture.md`](examples/architecture.md)
@@ -135,9 +163,9 @@ integrations/windsurf/windsurf-rules.md
 - [`technical-decision.md`](examples/technical-decision.md)
 - [`product-thinking.md`](examples/product-thinking.md)
 
-## 适用场景
+## 什么时候使用
 
-当任务存在不确定性、风险或多条可能路径时，First Principles Skill 特别有用：
+当任务存在不确定性、风险或多条可能路径时，特别适合使用：
 
 - 根因调试
 - 架构设计
@@ -149,7 +177,7 @@ integrations/windsurf/windsurf-rules.md
 - 安全敏感变更
 - 迁移规划
 
-对于非常小且明确的改动，分析可以很短。重点是有纪律地推理，而不是形式主义。
+对于非常小且明确的改动，推理可以很短。重点是纪律，不是仪式感。
 
 ## 文件结构
 
@@ -160,6 +188,9 @@ LICENSE
 CHANGELOG.md
 CONTRIBUTING.md
 .gitignore
+assets/
+  hero.svg
+  reasoning-loop.svg
 prompts/
   first-principles.md
   first-principles-debugging.md
@@ -189,7 +220,7 @@ docs/
 
 ## 安全与隐私
 
-这个仓库只包含文本 prompts 和文档。它不需要 API keys、遥测、包安装或网络访问。
+这个仓库只包含文本 prompts、文档和轻量 SVG 资产。它不需要 API keys、遥测、包安装或运行时网络访问。
 
 贡献时请不要提交：
 

@@ -1,0 +1,73 @@
+<svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">First Principles Skill hero banner</title>
+  <desc id="desc">A banner showing first-principles thinking for AI coding agents before code is written.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.46" stop-color="#111827"/>
+      <stop offset="1" stop-color="#073B4C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="182" y1="140" x2="1098" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="560" rx="36" fill="url(#bg)"/>
+  <path d="M105 426C260 260 412 524 568 342C737 145 921 265 1102 118" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+  <path d="M89 157C257 251 382 48 552 156C719 262 857 100 1094 217" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" opacity="0.16"/>
+
+  <g opacity="0.23">
+    <circle cx="104" cy="98" r="3" fill="#E5E7EB"/>
+    <circle cx="206" cy="464" r="3" fill="#E5E7EB"/>
+    <circle cx="1136" cy="92" r="3" fill="#E5E7EB"/>
+    <circle cx="1184" cy="392" r="3" fill="#E5E7EB"/>
+    <circle cx="994" cy="478" r="2" fill="#E5E7EB"/>
+    <circle cx="383" cy="86" r="2" fill="#E5E7EB"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="84" y="78" width="1112" height="404" rx="28" fill="#0F172A" fill-opacity="0.78" stroke="#334155"/>
+    <rect x="112" y="108" width="210" height="38" rx="19" fill="#111827" stroke="#334155"/>
+    <circle cx="138" cy="127" r="7" fill="#34D399"/>
+    <text x="158" y="133" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">reason before code</text>
+
+    <text x="112" y="218" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="64" font-weight="850" letter-spacing="-1">
+      First Principles Skill
+    </text>
+    <text x="114" y="266" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="500">
+      A thinking toolkit for vibe coding agents
+    </text>
+    <text x="114" y="306" fill="#94A3B8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">
+      Make Claude Code, Codex, Cursor, Windsurf, Aider, Cline, Gemini CLI and other agents
+    </text>
+    <text x="114" y="334" fill="#94A3B8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">
+      break problems down before they write code.
+    </text>
+
+    <g transform="translate(114 378)">
+      <rect width="142" height="42" rx="21" fill="#22D3EE" fill-opacity="0.14" stroke="#22D3EE"/>
+      <text x="24" y="27" fill="#BAE6FD" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="750">debugging</text>
+      <rect x="158" width="152" height="42" rx="21" fill="#A78BFA" fill-opacity="0.14" stroke="#A78BFA"/>
+      <text x="181" y="27" fill="#DDD6FE" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="750">architecture</text>
+      <rect x="326" width="146" height="42" rx="21" fill="#34D399" fill-opacity="0.14" stroke="#34D399"/>
+      <text x="350" y="27" fill="#BBF7D0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="750">refactoring</text>
+      <rect x="488" width="124" height="42" rx="21" fill="#FBBF24" fill-opacity="0.13" stroke="#FBBF24"/>
+      <text x="515" y="27" fill="#FDE68A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="750">product</text>
+    </g>
+
+    <g transform="translate(798 132)">
+      <rect width="314" height="270" rx="20" fill="#020617" fill-opacity="0.72" stroke="#334155"/>
+      <text x="28" y="48" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">agent prompt</text>
+      <rect x="28" y="76" width="258" height="2" fill="#334155"/>
+      <text x="28" y="116" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15">problem != request</text>
+      <text x="28" y="150" fill="#C4B5FD" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15">facts > assumptions</text>
+      <text x="28" y="184" fill="#86EFAC" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15">root cause > patch</text>
+      <text x="28" y="218" fill="#FDE68A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15">verify before confidence</text>
+    </g>
+  </g>
+</svg>
