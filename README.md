@@ -1,5 +1,7 @@
 # First Principles Skill
 
+[中文](README.zh-CN.md)
+
 A first-principles thinking toolkit for vibe coding agents — helping Claude Code, Codex, Cursor, Windsurf, and other AI coding tools reason from fundamentals before writing code.
 
 ## What This Is
@@ -153,6 +155,7 @@ For tiny, obvious edits, keep the analysis brief. The point is disciplined reaso
 
 ```text
 README.md
+README.zh-CN.md
 LICENSE
 CHANGELOG.md
 CONTRIBUTING.md
