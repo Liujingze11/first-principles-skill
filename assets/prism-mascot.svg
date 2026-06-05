@@ -1,0 +1,91 @@
+<svg width="980" height="720" viewBox="0 0 980 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Prism mascot for First Principles Skill</title>
+  <desc id="desc">An original prism engineer mascot that separates a blurry request into facts, assumptions, constraints, root cause and verified code.</desc>
+  <defs>
+    <linearGradient id="background" x1="92" y1="58" x2="884" y2="653" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.5" stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#ECFEFF"/>
+    </linearGradient>
+    <linearGradient id="body" x1="331" y1="151" x2="557" y2="514" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.44" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="91" y1="302" x2="873" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#94A3B8" stop-opacity="0.18"/>
+      <stop offset="0.47" stop-color="#22D3EE" stop-opacity="0.72"/>
+      <stop offset="0.69" stop-color="#A78BFA" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#34D399" stop-opacity="0.78"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="28" y="28" width="924" height="664" rx="44" fill="url(#background)" stroke="#E2E8F0" stroke-width="2"/>
+  <path d="M93 319C164 285 221 276 290 299C359 322 407 350 476 329C544 309 590 261 666 274C733 286 812 322 887 354" stroke="url(#beam)" stroke-width="28" stroke-linecap="round"/>
+  <path d="M95 316C170 315 221 315 289 315" stroke="#94A3B8" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 18" opacity="0.55"/>
+
+  <g filter="url(#shadow)">
+    <path d="M448 116L594 206L566 456L448 558L330 456L302 206L448 116Z" fill="url(#body)" stroke="#0F172A" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M448 116L448 558" stroke="#F8FAFC" stroke-width="4" opacity="0.42"/>
+    <path d="M302 206L448 274L594 206" stroke="#F8FAFC" stroke-width="4" opacity="0.45"/>
+    <path d="M330 456L448 390L566 456" stroke="#F8FAFC" stroke-width="4" opacity="0.38"/>
+    <path d="M448 274L448 390" stroke="#F8FAFC" stroke-width="4" opacity="0.35"/>
+  </g>
+
+  <g>
+    <rect x="372" y="254" width="152" height="86" rx="34" fill="#0F172A" stroke="#E2E8F0" stroke-width="6"/>
+    <circle cx="416" cy="296" r="17" fill="#BAE6FD"/>
+    <circle cx="481" cy="296" r="17" fill="#BBF7D0"/>
+    <circle cx="421" cy="291" r="6" fill="#0F172A"/>
+    <circle cx="486" cy="291" r="6" fill="#0F172A"/>
+    <path d="M424 326C437 338 461 338 474 326" stroke="#F8FAFC" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M363 155C385 114 512 114 533 155L548 201H348L363 155Z" fill="#FBBF24" stroke="#0F172A" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M384 153H512" stroke="#FEF3C7" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <rect x="337" y="194" width="222" height="27" rx="13.5" fill="#F59E0B" stroke="#0F172A" stroke-width="7"/>
+  </g>
+
+  <g stroke="#0F172A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M327 367C278 365 244 386 221 423"/>
+    <path d="M569 366C620 359 659 379 688 416"/>
+    <path d="M220 423L190 468"/>
+    <path d="M688 416L733 450"/>
+  </g>
+
+  <g>
+    <circle cx="183" cy="479" r="35" fill="#FFFFFF" stroke="#0F172A" stroke-width="7"/>
+    <path d="M207 504L239 536" stroke="#0F172A" stroke-width="9" stroke-linecap="round"/>
+    <path d="M170 475H196" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+    <path d="M183 462V488" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M724 444L764 412L795 452L756 484L724 444Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M741 445L761 429" stroke="#10B981" stroke-width="6" stroke-linecap="round"/>
+    <path d="M752 459L775 441" stroke="#10B981" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <rect x="82" y="160" width="178" height="48" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="171" y="191" text-anchor="middle" fill="#475569" font-size="17" font-weight="800">blurry request</text>
+
+    <rect x="654" y="166" width="116" height="42" rx="21" fill="#E0F2FE" stroke="#38BDF8"/>
+    <text x="712" y="193" text-anchor="middle" fill="#0369A1" font-size="15" font-weight="850">facts</text>
+    <rect x="686" y="226" width="164" height="42" rx="21" fill="#F3E8FF" stroke="#A78BFA"/>
+    <text x="768" y="253" text-anchor="middle" fill="#6D28D9" font-size="15" font-weight="850">assumptions</text>
+    <rect x="660" y="286" width="150" height="42" rx="21" fill="#DCFCE7" stroke="#34D399"/>
+    <text x="735" y="313" text-anchor="middle" fill="#047857" font-size="15" font-weight="850">constraints</text>
+    <rect x="686" y="346" width="144" height="42" rx="21" fill="#FEF3C7" stroke="#FBBF24"/>
+    <text x="758" y="373" text-anchor="middle" fill="#92400E" font-size="15" font-weight="850">root cause</text>
+    <rect x="650" y="530" width="198" height="52" rx="26" fill="#0F172A"/>
+    <text x="749" y="563" text-anchor="middle" fill="#F8FAFC" font-size="17" font-weight="900">verified code</text>
+
+    <text x="448" y="626" text-anchor="middle" fill="#0F172A" font-size="34" font-weight="900">Prism</text>
+    <text x="448" y="654" text-anchor="middle" fill="#64748B" font-size="17" font-weight="650">the first-principles coding companion</text>
+  </g>
+</svg>

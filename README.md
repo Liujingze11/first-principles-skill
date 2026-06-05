@@ -47,6 +47,18 @@ Then implement.
 
 Ship the vibe. Keep the engineering.
 
+## Meet Prism
+
+<p align="center">
+  <img src="assets/prism-mascot.svg" alt="Prism, the first-principles coding companion" width="560">
+</p>
+
+Prism is the project's original mascot: a tiny first-principles engineer that turns blurry requests into facts, assumptions, constraints, root causes, options, and verified code.
+
+It exists to make the toolkit memorable. When your agent starts rushing into implementation, Prism is the reminder: split the beam before writing the patch.
+
+Prism and the included visuals are original SVG artwork created for this repository. No stock images, brand marks, celebrity likenesses, or existing character IP are used.
+
 ## What This Is
 
 First Principles Skill is a lightweight open-source prompt toolkit for AI coding agents.
@@ -191,6 +203,8 @@ CONTRIBUTING.md
 assets/
   hero.svg
   reasoning-loop.svg
+  foundation.svg
+  prism-mascot.svg
 prompts/
   first-principles.md
   first-principles-debugging.md

@@ -47,6 +47,18 @@ First Principles Skill 给你的 agent 加上一段轻量推理仪式：
 
 保留 vibe，也保留工程质量。
 
+## 认识 Prism
+
+<p align="center">
+  <img src="assets/prism-mascot.svg" alt="Prism，第一性原理编程伙伴" width="560">
+</p>
+
+Prism 是这个项目的原创吉祥物：一个小小的第一性原理工程师，把模糊需求拆成 facts、assumptions、constraints、root causes、options 和 verified code。
+
+它的作用是让这个工具包更有记忆点。当你的 agent 开始急着写实现时，Prism 就是在提醒它：先把光束拆开，再写补丁。
+
+Prism 和仓库内视觉资产都是为这个项目原创绘制的 SVG，没有使用外部图库、品牌标识、名人肖像或已有角色 IP。
+
 ## 这是什么
 
 First Principles Skill 是一个轻量级开源 prompt 工具包，面向各类 AI coding agents。
@@ -191,6 +203,8 @@ CONTRIBUTING.md
 assets/
   hero.svg
   reasoning-loop.svg
+  foundation.svg
+  prism-mascot.svg
 prompts/
   first-principles.md
   first-principles-debugging.md
